@@ -1,2 +1,18 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+def insertion_sort(lst):
+    sd_lst=[lst[0]]
+    us_lst=lst[1:]
+    for elm in us_lst:
+        for itn in range(len(sd_lst)):
+            if elm <=sd_lst[itn]:
+                sd_lst.insert(itn,elm)
+                break
+            elif itn==len(sd_lst)-1:
+                sd_lst.append(elm)
+    return(sd_lst)
+
+m_lst=(str(input('Unsorted list: '))).split()
+print()
+opt_lst=insertion_sort(m_lst)
+opt_lst_r=reversed(opt_lst)
+print('Sorted list: ',' '.join(opt_lst))
+print('Sorted list(reversed): ',' '.join(opt_lst_r))
